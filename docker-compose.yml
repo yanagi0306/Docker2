@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build:
+      context: ./vue3
+      dockerfile: Dockerfile
+    command: npm run serve -- --port 4000
+    volumes: 
+      - ./vue3:/app
+    ports:
+      - "4000:4000"
+      
+      
